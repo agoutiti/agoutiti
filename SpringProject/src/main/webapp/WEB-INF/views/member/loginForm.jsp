@@ -22,6 +22,32 @@
 	</c:when>
 </c:choose>
 
+
+<c:choose>
+	<c:when test = "${result == 'loginFailed' }"> 
+	<script>
+		window.onload = function() {
+			alert("|n아이디 잘못 입력. 다시 입력") ;
+		}
+	</script>
+	</c:when>
+</c:choose>
+
+<c:choose>
+	<c:when test = "${result == 'PasswordFailed' }"> 
+	<script>
+		window.onload = function() {
+			alert("|n비번 잘못 입력. 다시 입력") ;
+		}
+	</script>
+	</c:when>
+</c:choose>
+
+
+
+
+
+
 <!--  로그인 여부 체크 -->
 <!--  로그인 여부 체크 -->
 </head>
@@ -59,36 +85,43 @@
 </div>
 
 
-<% // form의 action 실행 전에 아이디, 비번 값에..... 자리수가 맞는지 검사한다  %>
+<% // form의 action 실행 전에 아이디, 비번 값 입력되었는지, 자리수가 맞는지 검사한다  %>
+<%	// form의 action이 실행되기 이전에 아이디, 비밀번호에 값이 입력되었는지,
+	// 자리수가 맞는지 검사한다.
+%>
 <script>
-	$(document).ready(function() {
-		$("#submit").on("click", function() {// 로그인 버튼 누르면 
-			//  alert (" 로그인 버튼을 클릭함");
+$(document).ready(function() {
+	// 로그인 버튼이 눌렸을 경우
+	$("#submit").on("click", function() {
+		// alert("로그인 버튼을 눌렀습니다.");
 		
-			if($("#id").val()=="") {
-				alert ("아이디를 입력하세요"); 
-				$("#id").focus();a
-				return false;
-			}	attributerr
-			if($("#id").val().length < 5 ) {
-				alert("아이디는 최소 5자리 이상 입력하세요");
-				$("#id").focus();
-				return false;
-			}
-			if($("#pwd").val()=="") {
-				alert ("password를 입력하세요"); 
-				$("#pwd").focus();
-				return false;
-			}	
-			if($("#pwd").val().length < 5 ) {
-				alert("password는 최소 5자리 이상 입력하세요");
-				$("#pwd").focus();
-				return false;
-			}
-			
-		});
-	
+		if($("#id").val() == "") {
+			alert("아이디를 입력하셔야 합니다.");
+			$("#id").focus();
+			return false;
+		}
+		if($("#id").val().length < 4) {
+			alert("아이디는 최소 4자리 이상을 입력하셔야 합니다.");
+			$("#id").focus();
+			return false;
+		}
+		
+		if($("#pwd").val() == "") {
+			alert("비밀번호를 입력하셔야 합니다.");
+			$("#pwd").focus();
+			return false;
+		}
+		if($("#pwd").val().length < 4) {
+			alert("비밀번호는 최소 4자리 이상을 입력하셔야 합니다.");
+			$("#pwd").focus();
+			return false;
+		}
+		
 	});
+	
+	
+});
 </script>
+
 </body>
 </html>
