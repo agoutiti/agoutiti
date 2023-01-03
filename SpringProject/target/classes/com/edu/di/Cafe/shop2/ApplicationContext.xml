@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  Coffee coffee = new com.edu.di.coffeeshop.coffee4.coffee();  랑 똑같은 형식인데 bean 형식으로 쓴거-->
+<!--  bean id="coffee" class="com.edu.di.Cafe.shop2" 
+
+줄여서 APX, ApplicationContext, Spring Bean Configuration File -->
+
+</beans>

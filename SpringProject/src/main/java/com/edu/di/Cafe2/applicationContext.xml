@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="hot" class="com.edu.di.Cafe2.HotAme"></bean>
+<bean id="ice" class="com.edu.di.Cafe2.IceAme"></bean>
+
+<bean id="coffee"	 class="com.edu.di.Cafe2.Coffee">
+<!--  Coffee coffee = new Coffee(); 이게 없어서 빨간줄 생김. 매개변수 생성자 Coffee.java 파일에 있으니까... 
+Coffee coffee = new Coffee(Americano ame); 일케 스프링 빈에서 쓰려면..
+<constructor-arg ref="hot"></constructor-arg>	ref= 레퍼런스   -->
+	<property name="coffee" ref="HotAme"></property>
+</bean>
+<!-- setCoffee() 메서드에서 property Name을 분리해서 가져온다
+	setCoffee() => set + Coffee => Coffee = > coffee
+	ref = "hot" 이라고 하면 주입받을 bean의 이름(ice, hot) 둘 중 하나의 이름 써주면 됨?  -->
+</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!--  6번째 예제: 자동주입@Autowired 실행하려면 기술해야하는 부분  -->
+<context:annotation-config></context:annotation-config>
+
+<bean id="tireKR" class="com.edu.Car.KRTire"></bean>
+<bean id="tireUS" class="com.edu.Car.USTire"></bean>
+<bean id="tire"   class="com.edu.Car.EUTire"></bean>
+
+<bean id="Car"    class="com.edu.Car.Car">
+<!-- <property name ="tire" ref = "tireKR" > </property>  -->	
+</bean>
+
+</beans>
