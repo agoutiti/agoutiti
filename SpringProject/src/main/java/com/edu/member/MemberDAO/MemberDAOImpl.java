@@ -16,28 +16,17 @@ public class MemberDAOImpl implements MemberDAO {
 @Autowired
 private SqlSession sqlSession;
 
-private static final Logger logger
- = LoggerFactory.getLogger(MemberDAOImpl.class) ;
+ 	private static final Logger logger 
+	= LoggerFactory.getLogger(MemberDAOImpl.class);
 	
+	private	static final String Namespace = "com.edu.member";
+	 
 	
 	@Override
 	public MemberDTO loginByID(MemberDTO memberDTO) throws DataAccessException {
-		
-		return null;
+		MemberDTO memDTO = sqlSession.selectOne(Namespace + ".loginByID", memberDTO);
+		return memDTO;
 	}
 
 }
 
-
-<mapper namespalce - com.edu.member>
-<resultMap id="memberResult" type="com.edu.member.dto.MemberDTO">
-	<result property="id" column="id"/>
-	<result property="pwd" column="pwd"/>
-	<result property="id" column="name"/>
-	<result property="id" column="email"/>
-	<result property="id" column="joinDate"/>
-
-</resultMap>
-
-<selelct id="loginByID" parameterType="">
-</mapper>
