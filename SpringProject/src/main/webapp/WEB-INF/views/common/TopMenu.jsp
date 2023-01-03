@@ -44,10 +44,10 @@ fixted-top은 상단 공간 차지하지 않고 위에 고정
 			</li>	
 			
 			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">회원관리<span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="${contextPath}/member/loginForm.do" >LogIn</a></li>
-			</ul>		
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">회원관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+			<li><a href="${contextPath}/member/loginForm.do">로그인</a></li>
+					</ul>	
 			</li>		
 		</ul>
 	</div>

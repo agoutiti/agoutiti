@@ -12,11 +12,12 @@ import com.edu.member.MemberDTO;
 public interface MemberController {
 
 
-	
-public ModelAndView loginForm (HttpServletRequest req, HttpServletResponse res)  //로그인 폼
-	
-public ModelAndView login (@ModelAttribute("memberDTO") 
-				MemberDTO memberDTO, //로그인 처리
+	// 로그인 폼
+	public ModelAndView loginForm(HttpServletRequest request, HttpServletResponse response) 
+			throws Exception; 
+	// 로그인 처리
+	public ModelAndView login (@ModelAttribute("member") 
+				MemberDTO member,
 				RedirectAttributes ReAttr, 
 				HttpServletRequest request, 
 				HttpServletResponse response) throws Exception; // 로그인 처리
