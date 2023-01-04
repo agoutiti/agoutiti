@@ -99,7 +99,7 @@ if(memberDTO != null) { // 로그인 정보에 해당하는 자료가 있으면
 	return mav;
 	}
 
-	
+
 @Override	
 @RequestMapping(value="/logout.do", method=RequestMethod.GET)
 public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) 
@@ -113,6 +113,6 @@ public ModelAndView logout(HttpServletRequest request, HttpServletResponse respo
 	mav.setViewName("redirect:/main.do"); // 메인 페이지로 이동
 	
 	return mav;
-	}
+
 }
 // MemberController-Impl, impl,
