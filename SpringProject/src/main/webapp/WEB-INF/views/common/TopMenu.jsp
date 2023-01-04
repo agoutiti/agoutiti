@@ -29,6 +29,21 @@ fixted-top은 상단 공간 차지하지 않고 위에 고정
 <!--  실질적인 메뉴 나열  --> 
 	<div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav navbar-left">
+			
+			<li>
+				<form class = "navbar-form navbar-left" method="post" action="${contextPath}/member/login.do" >
+					<c:choose>
+						<c:when text="${isLogOn == true && member != null}">
+							<p class="navbar-text"><b>${member.name}님 즐거운 어쩌고....</b></p>
+							<a href="${contextPath}/member/logout.do" class="btn btn-danger">
+								<span class="glyphicon glyphicon-log-out></span> LOGOUT</a>
+					</c:choose>
+				</form>
+			
+			</li>		
+			
+			
+			
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Basic<span class="caret"></span></a>
 			<ul class="dropdown-menu">
