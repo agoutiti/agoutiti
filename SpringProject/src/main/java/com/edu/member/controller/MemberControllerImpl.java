@@ -113,9 +113,6 @@ public ModelAndView logout(HttpServletRequest request, HttpServletResponse respo
 	mav.setViewName("redirect:/main.do"); // 메인 페이지로 이동
 	
 	return mav;
-	}
-
-
 
 }
 // MemberController-Impl, impl,
