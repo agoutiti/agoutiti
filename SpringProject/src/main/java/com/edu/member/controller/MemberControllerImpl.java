@@ -114,6 +114,5 @@ public ModelAndView logout(HttpServletRequest request, HttpServletResponse respo
 	
 	return mav;
 	}
-
 }
 // MemberController-Impl, impl,
